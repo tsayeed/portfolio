@@ -1,0 +1,54 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout source repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Next.js site
+        run: npm run build
+
+      - name: Checkout GitHub Pages repository
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ secrets.PAGES_REPO }}  # Format: username/repo-name
+          token: ${{ secrets.PAGES_TOKEN }}
+          path: pages-repo
+
+      - name: Clear previous build
+        run: |
+          cd pages-repo
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          rm -rf *
+          cp -r ../out/* .
+          
+      - name: Add CNAME if custom domain
+        if: ${{ secrets.CUSTOM_DOMAIN }}
+        run: |
+          cd pages-repo
+          echo "${{ secrets.CUSTOM_DOMAIN }}" > CNAME
+
+      - name: Commit and push to GitHub Pages repository
+        run: |
+          cd pages-repo
+          git add .
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Deploy from main - $(date +'%Y-%m-%d %H:%M:%S')" && git push)
+

@@ -262,103 +262,85 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {/* Backend */}
             <div className="group bg-white p-8 sm:p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-100 hover:border-blue-300 hover:-translate-y-2">
-              <div className="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-100 transition-all border border-blue-100">
+              <div className="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-100 transition-all border border-blue-100 mx-auto">
                 <span className="text-3xl opacity-60 group-hover:opacity-100 transition-opacity">⚙️</span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 group-hover:text-blue-600 transition-colors">Backend</h3>
-              <div className="space-y-4">
-                <div className="flex items-center hover:translate-x-2 transition-transform">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                  <span className="text-sm sm:text-base text-gray-700 font-medium">Python</span>
-                </div>
-                <div className="flex items-center hover:translate-x-2 transition-transform">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                  <span className="text-sm sm:text-base text-gray-700 font-medium">Django</span>
-                </div>
-                <div className="flex items-center hover:translate-x-2 transition-transform">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                  <span className="text-sm sm:text-base text-gray-700 font-medium">FastAPI</span>
-                </div>
-                <div className="flex items-center hover:translate-x-2 transition-transform">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                  <span className="text-sm sm:text-base text-gray-700 font-medium">Falcon</span>
-                </div>
-                <div className="flex items-center hover:translate-x-2 transition-transform">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                  <span className="text-sm sm:text-base text-gray-700 font-medium">Node.js</span>
-                </div>
-                <div className="flex items-center hover:translate-x-2 transition-transform">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                  <span className="text-sm sm:text-base text-gray-700 font-medium">PHP/Laravel</span>
-                </div>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 group-hover:text-blue-600 transition-colors text-center">Backend</h3>
+              <div className="flex flex-wrap gap-2 justify-center">
+                <span className="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg text-sm font-medium border border-blue-200 hover:bg-blue-100 transition-colors">
+                  Python
+                </span>
+                <span className="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg text-sm font-medium border border-blue-200 hover:bg-blue-100 transition-colors">
+                  Django
+                </span>
+                <span className="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg text-sm font-medium border border-blue-200 hover:bg-blue-100 transition-colors">
+                  FastAPI
+                </span>
+                <span className="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg text-sm font-medium border border-blue-200 hover:bg-blue-100 transition-colors">
+                  Falcon
+                </span>
+                <span className="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg text-sm font-medium border border-blue-200 hover:bg-blue-100 transition-colors">
+                  Node.js
+                </span>
+                <span className="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg text-sm font-medium border border-blue-200 hover:bg-blue-100 transition-colors">
+                  PHP/Laravel
+                </span>
               </div>
             </div>
 
             {/* Databases */}
             <div className="group bg-white p-8 sm:p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-100 hover:border-green-300 hover:-translate-y-2">
-              <div className="w-16 h-16 bg-green-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-100 transition-all border border-green-100">
+              <div className="w-16 h-16 bg-green-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-100 transition-all border border-green-100 mx-auto">
                 <span className="text-3xl opacity-60 group-hover:opacity-100 transition-opacity">🗄️</span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 group-hover:text-green-600 transition-colors">Databases</h3>
-              <div className="space-y-4">
-                <div className="flex items-center hover:translate-x-2 transition-transform">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
-                  <span className="text-sm sm:text-base text-gray-700 font-medium">PostgreSQL</span>
-                </div>
-                <div className="flex items-center hover:translate-x-2 transition-transform">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
-                  <span className="text-sm sm:text-base text-gray-700 font-medium">MySQL</span>
-                </div>
-                <div className="flex items-center hover:translate-x-2 transition-transform">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
-                  <span className="text-sm sm:text-base text-gray-700 font-medium">Redis</span>
-                </div>
-                <div className="flex items-center hover:translate-x-2 transition-transform">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
-                  <span className="text-sm sm:text-base text-gray-700 font-medium">MongoDB</span>
-                </div>
-                <div className="flex items-center hover:translate-x-2 transition-transform">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
-                  <span className="text-sm sm:text-base text-gray-700 font-medium">DynamoDB</span>
-                </div>
-                <div className="flex items-center hover:translate-x-2 transition-transform">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
-                  <span className="text-sm sm:text-base text-gray-700 font-medium">Elasticsearch</span>
-                </div>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 group-hover:text-green-600 transition-colors text-center">Databases</h3>
+              <div className="flex flex-wrap gap-2 justify-center">
+                <span className="px-3 py-1.5 bg-green-50 text-green-700 rounded-lg text-sm font-medium border border-green-200 hover:bg-green-100 transition-colors">
+                  PostgreSQL
+                </span>
+                <span className="px-3 py-1.5 bg-green-50 text-green-700 rounded-lg text-sm font-medium border border-green-200 hover:bg-green-100 transition-colors">
+                  MySQL
+                </span>
+                <span className="px-3 py-1.5 bg-green-50 text-green-700 rounded-lg text-sm font-medium border border-green-200 hover:bg-green-100 transition-colors">
+                  Redis
+                </span>
+                <span className="px-3 py-1.5 bg-green-50 text-green-700 rounded-lg text-sm font-medium border border-green-200 hover:bg-green-100 transition-colors">
+                  MongoDB
+                </span>
+                <span className="px-3 py-1.5 bg-green-50 text-green-700 rounded-lg text-sm font-medium border border-green-200 hover:bg-green-100 transition-colors">
+                  DynamoDB
+                </span>
+                <span className="px-3 py-1.5 bg-green-50 text-green-700 rounded-lg text-sm font-medium border border-green-200 hover:bg-green-100 transition-colors">
+                  Elasticsearch
+                </span>
               </div>
             </div>
 
             {/* DevOps & Tools */}
             <div className="group bg-white p-8 sm:p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-100 hover:border-orange-300 hover:-translate-y-2">
-              <div className="w-16 h-16 bg-orange-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-100 transition-all border border-orange-100">
+              <div className="w-16 h-16 bg-orange-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-100 transition-all border border-orange-100 mx-auto">
                 <span className="text-3xl opacity-60 group-hover:opacity-100 transition-opacity">☁️</span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 group-hover:text-orange-600 transition-colors">DevOps & Cloud</h3>
-              <div className="space-y-4">
-                <div className="flex items-center hover:translate-x-2 transition-transform">
-                  <div className="w-2 h-2 bg-orange-600 rounded-full mr-3"></div>
-                  <span className="text-sm sm:text-base text-gray-700 font-medium">AWS</span>
-                </div>
-                <div className="flex items-center hover:translate-x-2 transition-transform">
-                  <div className="w-2 h-2 bg-orange-600 rounded-full mr-3"></div>
-                  <span className="text-sm sm:text-base text-gray-700 font-medium">Docker</span>
-                </div>
-                <div className="flex items-center hover:translate-x-2 transition-transform">
-                  <div className="w-2 h-2 bg-orange-600 rounded-full mr-3"></div>
-                  <span className="text-sm sm:text-base text-gray-700 font-medium">CI/CD</span>
-                </div>
-                <div className="flex items-center hover:translate-x-2 transition-transform">
-                  <div className="w-2 h-2 bg-orange-600 rounded-full mr-3"></div>
-                  <span className="text-sm sm:text-base text-gray-700 font-medium">Git/GitHub</span>
-                </div>
-                <div className="flex items-center hover:translate-x-2 transition-transform">
-                  <div className="w-2 h-2 bg-orange-600 rounded-full mr-3"></div>
-                  <span className="text-sm sm:text-base text-gray-700 font-medium">GraphQL</span>
-                </div>
-                <div className="flex items-center hover:translate-x-2 transition-transform">
-                  <div className="w-2 h-2 bg-orange-600 rounded-full mr-3"></div>
-                  <span className="text-sm sm:text-base text-gray-700 font-medium">gRPC</span>
-                </div>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 group-hover:text-orange-600 transition-colors text-center">DevOps & Cloud</h3>
+              <div className="flex flex-wrap gap-2 justify-center">
+                <span className="px-3 py-1.5 bg-orange-50 text-orange-700 rounded-lg text-sm font-medium border border-orange-200 hover:bg-orange-100 transition-colors">
+                  AWS
+                </span>
+                <span className="px-3 py-1.5 bg-orange-50 text-orange-700 rounded-lg text-sm font-medium border border-orange-200 hover:bg-orange-100 transition-colors">
+                  Docker
+                </span>
+                <span className="px-3 py-1.5 bg-orange-50 text-orange-700 rounded-lg text-sm font-medium border border-orange-200 hover:bg-orange-100 transition-colors">
+                  CI/CD
+                </span>
+                <span className="px-3 py-1.5 bg-orange-50 text-orange-700 rounded-lg text-sm font-medium border border-orange-200 hover:bg-orange-100 transition-colors">
+                  Git/GitHub
+                </span>
+                <span className="px-3 py-1.5 bg-orange-50 text-orange-700 rounded-lg text-sm font-medium border border-orange-200 hover:bg-orange-100 transition-colors">
+                  GraphQL
+                </span>
+                <span className="px-3 py-1.5 bg-orange-50 text-orange-700 rounded-lg text-sm font-medium border border-orange-200 hover:bg-orange-100 transition-colors">
+                  gRPC
+                </span>
               </div>
             </div>
           </div>

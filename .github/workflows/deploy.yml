@@ -37,8 +37,10 @@ jobs:
           cd pages-repo
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          rm -rf *
-          cp -r ../out/* .
+          # Remove all files except .git
+          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          # Copy all files including hidden ones
+          cp -r ../out/. .
           
       - name: Add CNAME if custom domain
         env:

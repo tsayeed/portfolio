@@ -5,7 +5,10 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '' : '',
+  // If your Pages repo is NOT username.github.io, set basePath to '/repo-name'
+  // For example: basePath: '/portfolio'
+  // If it IS username.github.io, leave as empty string
+  basePath: '',
 };
 
 export default nextConfig;
